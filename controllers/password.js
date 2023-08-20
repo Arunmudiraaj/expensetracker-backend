@@ -28,6 +28,7 @@ module.exports.forgotPassword = async (req, res) => {
       id: uid,
       isActive: true,
     });
+    console.log("row created");
 
     const result = await tranEmailApi.sendTransacEmail({
       sender,
